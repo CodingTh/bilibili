@@ -1,0 +1,319 @@
+/* 把我们所有标签的内外边距清零 */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/* em 和 i 斜体的文字不倾斜 */
+em,
+i {
+  font-style: normal;
+}
+/* 去掉li 的小圆点 */
+li {
+  list-style: none;
+}
+img {
+  /* border 0 照顾低版本浏览器 如果 图片外面包含了链接会有边框的问题 */
+  border: 0;
+  /* 取消图片底侧有空白缝隙的问题 */
+  vertical-align: middle;
+}
+button {
+  /* 当我们鼠标经过button 按钮的时候，鼠标变成小手 */
+  cursor: pointer;
+}
+a {
+  text-decoration: none;
+  -webkit-tap-highlight-color: transparent;
+}
+button,
+input {
+  /* "\5B8B\4F53" 就是宋体的意思 这样浏览器兼容性比较好 */
+  font-family: Microsoft YaHei, Heiti SC, tahoma, arial, Hiragino Sans GB, "\5B8B\4F53", sans-serif;
+  border: none;
+  outline: none;
+}
+body {
+  /* CSS3 抗锯齿形 让文字显示的更加清晰 */
+  -webkit-font-smoothing: antialiased;
+  font: 12px Microsoft YaHei, Heiti SC, tahoma, arial, Hiragino Sans GB, "\5B8B\4F53", sans-serif;
+  background: #ccc;
+}
+.clearfix::after {
+  content: '';
+  display: block;
+  clear: both;
+  visibility: hidden;
+  height: 0;
+  line-height: 0;
+}
+.clearfix {
+  *zoom: 1;
+}
+@font-face {
+  font-family: 'iconfont';
+  src: url('../fonts/iconfont.eot');
+  src: url('../fonts/iconfont.eot?#iefix') format('embedded-opentype'), url('../fonts/iconfont.woff2') format('woff2'), url('../fonts/iconfont.woff') format('woff'), url('../fonts/iconfont.ttf') format('truetype'), url('../fonts/iconfont.svg#iconfont') format('svg');
+}
+.iconfont {
+  font-family: 'iconfont';
+}
+.view {
+  padding-top: 2.4rem;
+  background-color: #fff;
+}
+.view .big_header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 999;
+  background-color: #fff;
+}
+.view .header {
+  display: flex;
+}
+.view .header .logo {
+  width: 1.76rem;
+  height: 0.746667rem;
+  margin: 0.213333rem 0.4rem;
+}
+.view .header .logo a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  line-height: 0.746667rem;
+  font-size: 0;
+  overflow: hidden;
+}
+.view .header .logo a::before {
+  content: '\e6b4';
+  font-family: 'iconfont';
+  font-size: 0.72rem;
+  color: #DE698C;
+}
+.view .header .search {
+  flex: 1;
+  width: 100%;
+  height: 0.666667rem;
+  margin: 0.293333rem 0;
+  background-color: #F4F4F4;
+  border-radius: 0.3333335rem;
+}
+.view .header .search a {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 100%;
+  line-height: 0.666667rem;
+  color: #999999;
+  font-size: 0.32rem;
+  text-indent: 0.746667rem;
+}
+.view .header .search a::before {
+  content: '';
+  position: absolute;
+  left: 5%;
+  top: 15%;
+  width: 0.466133rem;
+  height: 0.466133rem;
+  background: url(../images/search-pro.png) no-repeat;
+  background-size: 0.466133rem 0.466133rem;
+}
+.view .header .pic {
+  width: 0.666667rem;
+  height: 0.666667rem;
+  margin: 0.293333rem 0.293333rem 0.293333rem 0.4rem;
+}
+.view .header .pic a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  line-height: 0.666667rem;
+}
+.view .header .pic a img {
+  width: 100%;
+  vertical-align: top;
+}
+.view .header .download {
+  width: 2.186667rem;
+  height: 0.666667rem;
+  margin: 0.293333rem 0.32rem 0.293333rem 0;
+  text-align: center;
+  line-height: 0.666667rem;
+  background-color: #FB7299;
+  color: #fff;
+  font-size: 0.32rem;
+  border-radius: 0.08rem;
+}
+.view .nav {
+  display: flex;
+  width: 100%;
+  padding-left: 0.64rem;
+}
+.view .nav ul {
+  flex: 1;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+.view .nav ul li {
+  width: 20%;
+}
+.view .nav ul li a {
+  display: inline-block;
+  padding: 0.213333rem 0.053333rem;
+  font-size: 0.373333rem;
+  color: #757575;
+  border-bottom: 2px solid transparent;
+}
+.view .nav ul li:first-child a {
+  color: #FB7299;
+  border-bottom: 2px solid #FB7299;
+}
+.view .nav span {
+  display: block;
+  width: 0.986667rem;
+  height: 1.066667rem;
+  padding-right: 0.4rem;
+  line-height: 0.933333rem;
+  font-size: 0.32rem;
+  color: #757575;
+  font-weight: 700;
+}
+.view .banner {
+  margin: 0.266667rem 0.32rem;
+}
+.view .banner img {
+  width: 100%;
+  border-radius: 0.266667rem;
+}
+.view .content {
+  width: 100%;
+}
+.view .content ul {
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+  padding: 0 0.32rem;
+}
+.view .content ul li {
+  position: relative;
+  width: 48%;
+  margin-bottom: 0.533333rem;
+}
+.view .content ul li a {
+  display: block;
+}
+.view .content ul li a img {
+  width: 100%;
+  border-radius: 0.133333rem;
+  margin-bottom: 0.186667rem;
+}
+.view .content ul li a p:nth-child(2) {
+  height: 0.933333rem;
+  font-size: 0.32rem;
+  color: #212121;
+  letter-spacing: 0;
+  overflow: hidden;
+  display: -webkit-box;
+}
+.view .content ul li a p:last-child {
+  position: absolute;
+  left: 5%;
+  bottom: 29%;
+  font-size: 0.32rem;
+  color: #fff;
+}
+.view .content ul li a p:last-child em {
+  display: inline-block;
+}
+.view .content ul li a p:last-child em:first-child {
+  margin-right: 0.453333rem;
+}
+.view .content ul li a p:last-child em span {
+  display: inline-block;
+  margin-right: 0.186667rem;
+  font-size: 0.426667rem;
+  font-weight: 400;
+  vertical-align: middle;
+}
+.view .content ul li:nth-child(2n) {
+  margin-left: 0.32rem;
+}
+.view .copy {
+  width: 100%;
+  margin-top: 1.066667rem;
+  text-align: center;
+}
+.view .copy p {
+  padding-bottom: 0.533333rem;
+  font-size: 0.346667rem;
+  color: #999999;
+}
+.view .footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  display: flex;
+  width: 100%;
+  height: 1.653333rem;
+  background: #000;
+  opacity: 0.9;
+  text-align: center;
+}
+.view .footer .close {
+  flex: 1;
+  height: 100%;
+  line-height: 1.653333rem;
+}
+.view .footer .close img {
+  width: 30%;
+}
+.view .footer .info {
+  flex: 6;
+  height: 100%;
+  text-align: left;
+}
+.view .footer .info img {
+  float: left;
+  width: 20%;
+  margin-top: 0.213333rem;
+}
+.view .footer .info p {
+  float: left;
+  width: 80%;
+  height: 100%;
+  padding-left: 0.133333rem;
+  font-size: 0.373333rem;
+}
+.view .footer .info p span {
+  display: block;
+  width: 100%;
+  height: 50%;
+  line-height: 1.2rem;
+  color: #fff;
+  font-weight: 700;
+}
+.view .footer .info p em {
+  display: block;
+  width: 100%;
+  height: 50%;
+  color: #999;
+}
+.view .footer .experience {
+  flex: 3;
+  height: 100%;
+  line-height: 1.493333rem;
+  text-align: center;
+}
+.view .footer .experience button {
+  width: 1.946667rem;
+  height: 0.826667rem;
+  line-height: 0.826667rem;
+  color: #fff;
+  font-size: 0.373333rem;
+  background-color: #FB7299;
+  border-radius: 0.133333rem;
+}

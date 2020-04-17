@@ -1,0 +1,245 @@
+/* 把我们所有标签的内外边距清零 */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/* em 和 i 斜体的文字不倾斜 */
+em,
+i {
+  font-style: normal;
+}
+/* 去掉li 的小圆点 */
+li {
+  list-style: none;
+}
+img {
+  /* border 0 照顾低版本浏览器 如果 图片外面包含了链接会有边框的问题 */
+  border: 0;
+  /* 取消图片底侧有空白缝隙的问题 */
+  vertical-align: middle;
+}
+button {
+  /* 当我们鼠标经过button 按钮的时候，鼠标变成小手 */
+  cursor: pointer;
+}
+a {
+  text-decoration: none;
+  -webkit-tap-highlight-color: transparent;
+}
+button,
+input {
+  /* "\5B8B\4F53" 就是宋体的意思 这样浏览器兼容性比较好 */
+  font-family: Microsoft YaHei, Heiti SC, tahoma, arial, Hiragino Sans GB, "\5B8B\4F53", sans-serif;
+  border: none;
+  outline: none;
+}
+body {
+  /* CSS3 抗锯齿形 让文字显示的更加清晰 */
+  -webkit-font-smoothing: antialiased;
+  font: 12px Microsoft YaHei, Heiti SC, tahoma, arial, Hiragino Sans GB, "\5B8B\4F53", sans-serif;
+  background: #ccc;
+}
+.clearfix::after {
+  content: '';
+  display: block;
+  clear: both;
+  visibility: hidden;
+  height: 0;
+  line-height: 0;
+}
+.clearfix {
+  *zoom: 1;
+}
+@font-face {
+  font-family: 'iconfont';
+  src: url('../fonts/iconfont.eot');
+  src: url('../fonts/iconfont.eot?#iefix') format('embedded-opentype'), url('../fonts/iconfont.woff2') format('woff2'), url('../fonts/iconfont.woff') format('woff'), url('../fonts/iconfont.ttf') format('truetype'), url('../fonts/iconfont.svg#iconfont') format('svg');
+}
+.iconfont {
+  font-family: 'iconfont';
+}
+html {
+  height: 100%;
+  background-color: #F4F4F4;
+}
+.view {
+  background-color: #F4F4F4;
+}
+.view .header {
+  width: 100%;
+  height: 1.2rem;
+}
+.view .header h1 {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  text-align: center;
+  line-height: 1.2rem;
+  font-size: 0.426667rem;
+  color: #212121;
+  font-weight: 400;
+  background-color: #fff;
+  border-bottom: 1px solid #E7E7E7;
+}
+.view .header h1 a {
+  position: absolute;
+  right: 3.5%;
+  top: 2%;
+  font-size: 0.32rem;
+  color: #212121;
+}
+.view .content {
+  width: 100%;
+}
+.view .content form {
+  display: block;
+}
+.view .content form .user {
+  width: 100%;
+  margin-top: 0.4rem;
+  border-top: 1px solid #E7E7E7;
+  border-bottom: 1px solid #E7E7E7;
+  background-color: #fff;
+}
+.view .content form .user .user_no ul {
+  display: flex;
+  width: 100%;
+  height: 1.173333rem;
+  border-bottom: 1px solid #E7E7E7;
+}
+.view .content form .user .user_no ul li {
+  height: 1.173333rem;
+  padding-left: 0.32rem;
+  line-height: 1.173333rem;
+  font-size: 0.373333rem;
+}
+.view .content form .user .user_no ul li:first-child {
+  flex: 20%;
+}
+.view .content form .user .user_no ul li:last-child {
+  flex: 80%;
+}
+.view .content form .user .user_no ul li:last-child input {
+  width: 95%;
+}
+.view .content form .user .user_no ul li:last-child input::-webkit-input-placeholder {
+  color: #C0C0C0;
+}
+.view .content form .user .user_pwd ul {
+  display: flex;
+  width: 100%;
+  height: 1.173333rem;
+}
+.view .content form .user .user_pwd ul li {
+  height: 1.173333rem;
+  padding-left: 0.32rem;
+  line-height: 1.173333rem;
+  font-size: 0.373333rem;
+}
+.view .content form .user .user_pwd ul li:first-child {
+  flex: 20%;
+}
+.view .content form .user .user_pwd ul li:last-child {
+  flex: 80%;
+}
+.view .content form .user .user_pwd ul li:last-child input {
+  width: 95%;
+}
+.view .content form .user .user_pwd ul li:last-child input::-webkit-input-placeholder {
+  color: #C0C0C0;
+}
+.view .content form .forget {
+  padding: 0.213333rem 0.32rem 0.666667rem 0;
+  text-align: right;
+  font-size: 0.32rem;
+}
+.view .content form .forget a {
+  font-size: 0.373333rem;
+  color: #FB7299;
+}
+.view .content form .operstion {
+  width: 100%;
+}
+.view .content form .operstion ul {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+.view .content form .operstion ul li {
+  width: 4.48rem;
+  height: 1.173333rem;
+}
+.view .content form .operstion ul li button {
+  width: 100%;
+  height: 100%;
+  font-size: 0.373333rem;
+  border-radius: 0.133333rem;
+}
+.view .content form .operstion ul li:first-child button {
+  color: #FB7299;
+  border: 1px solid #FB7299;
+  background-color: #F4F4F4;
+}
+.view .content form .operstion ul li:last-child button {
+  color: #fff;
+  background-color: #FF9DB5;
+}
+.view .content form .agree {
+  margin: 0.72rem 0 5.226667rem 0;
+  text-align: center;
+  font-size: 0.32rem;
+  color: #757575;
+}
+.view .content form .agree a {
+  font-size: 0.32rem;
+  color: #FB7299;
+}
+.view .footer {
+  width: 100%;
+}
+.view .footer .footer_bd {
+  position: relative;
+  width: 7.36rem;
+  height: 2.053333rem;
+  margin: 0 auto;
+  border-top: 1px solid #E7E7E7;
+  text-align: center;
+}
+.view .footer .footer_bd::before {
+  position: absolute;
+  left: 30%;
+  top: -15%;
+  width: 3.36rem;
+  content: '其他登录方式';
+  text-align: center;
+  font-size: 0.373333rem;
+  color: #757575;
+  background-color: #F4F4F4;
+}
+.view .footer .footer_bd ul {
+  display: inline-block;
+  margin-top: 0.64rem;
+}
+.view .footer .footer_bd ul li {
+  display: inline-block;
+}
+.view .footer .footer_bd ul li:first-child {
+  margin-right: 0.48rem;
+}
+.view .footer .footer_bd ul li:last-child {
+  margin-left: 0.8rem;
+}
+.view .footer .footer_bd ul li a {
+  font-size: 0.32rem;
+  color: #757575;
+}
+.view .footer .footer_bd ul li a img {
+  width: 0.64rem;
+  height: 0.64rem;
+}
+.view .footer .footer_bd ul li a span {
+  display: block;
+}

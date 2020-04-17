@@ -1,0 +1,207 @@
+@import './base.less';
+
+html{
+    height:100%;
+    background-color: #F4F4F4;
+}
+
+.view{
+    background-color: #F4F4F4;
+    // 头部 begin
+    .header{
+        width: 100%;
+        height: 1.2rem;
+        h1{
+           position: relative;
+           width: 100%;
+           height: 100%;
+           margin:0;
+           text-align: center;
+           line-height: 1.2rem;
+           font-size: .426667rem;
+           color: #212121;
+           font-weight: 400;
+           background-color: #fff;
+           border-bottom: 1px solid #E7E7E7;
+           a{
+               position: absolute;
+               right: 3.5%;
+               top: 2%;
+               font-size: .32rem;
+               color: #212121;
+           }
+        }
+    }
+    // 头部 end
+
+    // 主体内容 begin
+    .content{
+        width: 100%;
+        form{
+            display: block;
+           .user{
+               width: 100%;
+               margin-top: .4rem;
+               border-top:1px solid #E7E7E7;
+               border-bottom:1px solid #E7E7E7;
+               background-color: #fff;
+               .user_no{
+                   ul{ 
+                        display: flex;
+                        width: 100%;
+                        height: 1.173333rem;
+                        border-bottom: 1px solid #E7E7E7;
+                       li{
+                           height: 1.173333rem;
+                           padding-left: .32rem;
+                           line-height: 1.173333rem;
+                           font-size: .373333rem;
+                           &:first-child{
+                               flex: 20%;
+                           }
+                           &:last-child{
+                               flex: 80%;
+                               input{
+                                width: 95%;
+                                &::-webkit-input-placeholder { 
+                                    color:#C0C0C0;
+                                }
+                            }
+                           }
+                       }
+                   }
+               }
+               .user_pwd{
+                    ul{
+                        display: flex;
+                        width: 100%;
+                        height: 1.173333rem;
+                        li{
+                            height: 1.173333rem;
+                            padding-left: .32rem;
+                            line-height: 1.173333rem;
+                            font-size: .373333rem;
+                            &:first-child{
+                                flex: 20%;
+                            }
+                            &:last-child{
+                                flex: 80%;
+                                input{
+                                    width: 95%;
+                                    &::-webkit-input-placeholder { 
+                                        color:#C0C0C0;
+                                    }
+                                }
+                            }
+                        }
+                    }
+               }
+           } 
+           .forget{
+               padding:.213333rem .32rem .666667rem 0;
+               text-align: right;
+               font-size: .32rem;
+               a{
+                   font-size: .373333rem;
+                   color: #FB7299;
+               }
+           }
+           .operstion{
+               width: 100%;
+               ul{
+                   width: 100%;
+                   display: flex;
+                   flex-direction: row;
+                   justify-content: space-around;
+                   li{
+                        width:4.48rem;
+                        height:1.173333rem;
+                       button{
+                           width: 100%;
+                           height: 100%;
+                           font-size: .373333rem;
+                           border-radius: .133333rem;
+                       }
+                       &:first-child{
+                           button{
+                               color: #FB7299;
+                               border:1px solid #FB7299;
+                               background-color: #F4F4F4;
+                           }
+                       }
+                       &:last-child{
+                           button{
+                               color: #fff;
+                               background-color: #FF9DB5;
+                           }
+                       }
+                   }
+               }
+           }
+           .agree{
+               margin:.72rem 0 5.226667rem 0;
+               text-align: center;
+               font-size: .32rem;
+               color: #757575;
+               a{
+                   font-size: .32rem;
+                   color: #FB7299;
+               }
+           }
+        }
+    }
+
+    // 主体内容 end
+
+    // 页脚 begin
+    .footer{
+        width: 100%;
+        .footer_bd{
+            position: relative;
+            width: 7.36rem;
+            height: 2.053333rem;
+            margin: 0 auto;
+            border-top: 1px solid #E7E7E7;
+            text-align: center;
+            &::before{
+                position: absolute;
+                left: 30%;
+                top: -15%;
+                width: 3.36rem;
+                content:'其他登录方式';
+                // margin:0 .533333rem;
+                text-align: center;
+                font-size: .373333rem;
+                color: #757575;
+                background-color: #F4F4F4;
+
+            }
+            ul{
+                display: inline-block;
+                margin-top: .64rem;
+                li{
+                    display: inline-block;
+                    // 没写好
+                    &:first-child{
+                        margin-right: .48rem;
+                    }
+                    &:last-child{
+                        margin-left: .8rem;
+                    }
+                    a{
+                       font-size: .32rem;
+                       color: #757575;
+                       img{
+                          width: .64rem;
+                          height:.64rem;
+                       }
+                       span{
+                           display: block;
+                       }
+                    }
+                }
+            }
+        }
+    }
+    // 页脚 end
+}

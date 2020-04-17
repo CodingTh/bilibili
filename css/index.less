@@ -1,0 +1,288 @@
+@import './base.less';  
+
+.view{
+    padding-top: 2.4rem;
+    background-color: #fff;
+    .big_header{
+        position: fixed;
+        top:0;
+        left:0;
+        width: 100%;
+        z-index: 999;
+        background-color: #fff;
+    }
+    .header{
+        display: flex;
+        .logo{
+            width: 1.76rem;
+            height: .746667rem;
+            margin:.213333rem .4rem;
+            a{
+                display: block;
+                width:100%;
+                height:100%;
+                line-height: .746667rem;
+                font-size: 0;
+                overflow: hidden;
+                &::before{
+                    content:'\e6b4';
+                    font-family: 'iconfont';
+                    font-size: .72rem;
+                    color: #DE698C;
+                }       
+            }
+        }
+        .search{
+            flex:1;
+            width: 100%;
+            height: .666667rem;
+            margin:.293333rem 0;
+            background-color: #F4F4F4;
+            border-radius: .666667rem/2;
+            a{
+                position: relative;
+                display: block;
+                width: 100%;
+                height:100%;
+                line-height: .666667rem;
+                color: #999999;
+                font-size: .32rem;
+                text-indent: .746667rem;
+                &::before{
+                    content:'';
+                    position: absolute;
+                    left: 5%;
+                    top: 15%;
+                    width: .466133rem;
+                    height:.466133rem;
+                    background: url(../images/search-pro.png) no-repeat;
+                    background-size: .466133rem .466133rem;
+                }
+            }
+        }
+        .pic{
+            width:.666667rem;
+            height:.666667rem;
+            margin:.293333rem .293333rem .293333rem .4rem;
+            a{
+                display: block;
+                width: 100%;
+                height: 100%;
+                line-height: .666667rem;
+                img{
+                    width: 100%;
+                    vertical-align: top;
+                }
+                // 图标头像
+                // span{
+                //     width: 100%;
+                //     height: 100%;
+                //     font-size: .666667rem;
+                //     color: #000;
+                // }
+            }
+        }
+        .download{
+            width: 2.186667rem;
+            height: .666667rem;
+            margin:.293333rem .32rem .293333rem 0;
+            text-align: center;
+            line-height: .666667rem;
+            background-color: #FB7299;
+            color: #fff;
+            font-size: .32rem;
+            border-radius: .08rem;
+        }
+    }
+
+    // 导航栏 begin
+    .nav{
+        display: flex;
+        width: 100%;
+        padding-left: .64rem;
+        ul{
+            flex: 1;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            li{
+                width: 20%;
+                a{
+                   display: inline-block;
+                   padding:.213333rem .053333rem;
+                   font-size: .373333rem;
+                   color: #757575;
+                   border-bottom: 2px solid transparent;
+                }
+                &:first-child{
+                    a{
+                        color: #FB7299;
+                        border-bottom: 2px solid #FB7299;
+                    }
+                 }
+            }
+        }
+        span{
+            display: block;
+            width: .986667rem;
+            height:1.066667rem;
+            padding-right: .4rem;
+            line-height: .933333rem;
+            font-size: .32rem;
+            color: #757575;
+            font-weight: 700;
+        }
+    }
+    // 导航栏 end
+
+    // banner begin
+    .banner{
+        margin: .266667rem .32rem;
+        img{
+            width: 100%;
+            border-radius: .266667rem;
+        }
+    }
+    // banner end
+
+    // 内容 begin
+    .content{
+        width: 100%;
+        ul{
+            display: flex;
+            width: 100%;
+            flex-wrap: wrap;
+            padding:0 .32rem;
+            li{
+                position: relative;
+                width: 48%;
+                margin-bottom: .533333rem;
+                a{
+                    display: block;
+                    img{
+                        width: 100%;
+                        border-radius: .133333rem;
+                        margin-bottom: .186667rem;
+                    }
+                    p{
+                        &:nth-child(2){
+                            height: .933333rem;
+                            font-size: .32rem;
+                            color: #212121;
+                            letter-spacing: 0;
+                            overflow: hidden;
+                            display: -webkit-box;
+                        }
+                        &:last-child{
+                            position: absolute;
+                            left: 5%;
+                            bottom: 29%;
+                            font-size: .32rem;
+                            color: #fff;
+                            em{
+                                display: inline-block;
+                                &:first-child{
+                                    margin-right: .453333rem;
+                                }
+                                span{
+                                    display: inline-block;
+                                    margin-right:.186667rem;
+                                    font-size: .426667rem;
+                                    font-weight: 400;
+                                    vertical-align: middle;
+                                }
+                            }
+                        }
+                    }
+                }
+                &:nth-child(2n){
+                    margin-left: .32rem;
+                }
+            }
+        }
+    }
+    // 内容 end
+
+    // 版权信息 begin
+    .copy{
+        width: 100%;
+        margin-top:1.066667rem;
+        text-align: center;
+        p{
+            padding-bottom: .533333rem;
+            font-size: .346667rem;
+            color: #999999;
+        }
+    }
+    // 版权信息 end
+
+    // 页脚 begin
+    .footer{
+        position: fixed;
+        left:0;
+        bottom:0;
+        display: flex;
+        width: 100%;
+        height: 1.653333rem;
+        background: #000;
+        opacity: .9;
+        text-align: center;
+        .close{
+            flex:1;
+            height:100%;
+            line-height: 1.653333rem;
+            img{
+                width:30%;
+            }
+        }
+        .info{
+            flex:6;
+            height: 100%;
+            text-align: left;
+            img{
+                float: left;
+                width: 20%;
+                margin-top: .213333rem;
+            }
+            p{
+                float: left;
+                width: 80%;
+                height:100%;
+                padding-left: .133333rem;
+                font-size: .373333rem;
+                span{
+                    display: block;
+                    width: 100%;
+                    height:50%;
+                    line-height: 1.2rem;
+                    color: #fff;
+                    font-weight: 700;
+                }
+                em{
+                    display: block;
+                    width: 100%;
+                    height:50%;
+                    color: #999;
+                }
+            }
+
+        }
+        .experience{
+            flex:3;
+            height:100%;
+            line-height: 1.493333rem;
+            text-align: center;
+            button{
+                width: 1.946667rem;
+                height: .826667rem;
+                line-height: .826667rem;
+                color: #fff;
+                font-size: .373333rem;
+                background-color: #FB7299;
+                border-radius: .133333rem;
+            }
+
+        }
+    }
+    // 页脚 end
+}

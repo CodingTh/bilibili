@@ -1,0 +1,152 @@
+@import './base.less';
+
+html{
+    // height:100%;
+    background-color: #fff;
+}
+
+.view{
+    background-color: #fff;
+    // 头部 begin
+    .header{
+        display: flex;
+        width: 100%;
+        .search{
+            position: relative;
+            flex:85%;
+            height:.8rem;
+            padding-left: .32rem;
+            margin: .186667rem 0;
+            &::before{
+                content:'';
+                position: absolute;
+                left: 7.5%;
+                top: 12%;
+                width: .586667rem;
+                height:.586667rem;
+                background: url(../images/search-pro.png) no-repeat;
+                background-size: .586667rem .586667rem;
+            }
+            input{
+                display: block;
+                width:100%;
+                height:100%;
+                background-color: #F4F4F4;
+                border-radius: .08rem;
+                font-size: .346667rem;
+                color: #505050;
+                text-indent: 1.12rem;
+                border:.026667rem solid #E7E7E7;
+                &::-webkit-input-placeholder { 
+                    color:#C0C0C0;
+                }
+            }
+        }
+        .cancel{
+            flex:15%;
+            width: 100%;
+            height:.8rem;
+            margin: .186667rem 0;
+            text-align: center;
+            a{
+                display: block;
+                width: 100%;
+                height: 100%;
+                line-height: .8rem;
+                font-size: .346667rem;
+                color: #FB7299;
+            }
+        }
+    }
+    // 头部 end
+
+    // 主体 begin
+    .content{
+        width: 100%;
+        .words{
+            width: 100%;
+            margin-top: .266667rem;
+            .title{
+                padding-left: .32rem;
+                margin-bottom: .373333rem;
+               span{
+                   font-size: .373333rem;
+                   color: #999999;
+               }
+            }
+            .keywords{
+                width: 100%;
+                text-align: center;
+                ul{
+                    width: 100%;
+                    padding:0 0 .4rem .32rem;
+                    li{
+                        float: left;
+                        margin:0 .24rem .32rem 0;
+                       a{
+                           display: block;
+                           padding:.186667rem .346667rem;
+                           font-size: .373333rem;
+                           color: #505050;
+                           border: 1px solid #CCCCCC;
+                           border-radius: .453333rem;
+                       }
+                    }
+                }
+            }
+            .word-footer{
+                width: 100%;
+                height: .266667rem;
+                background-color: #F4F4F4;
+            }
+        }
+        .history{
+            width: 100%;
+            .his_title{
+                width: 100%;
+                padding-left: .32rem;
+                margin-bottom: .453333rem;
+                span{
+                    font-size: .373333rem;
+                    color: #999999;
+                }
+            }
+            .his_bd{
+                width: 100%;
+                ul{
+                    overflow: hidden;
+                    margin-left: .32rem;
+                    li{
+                        a{
+                            position: relative;
+                            display: block;
+                            padding:.32rem 0;
+                            text-indent: .72rem;
+                            font-size: .373333rem;
+                            color: #505050;
+                            &::before{
+                                position: absolute;
+                                left: 0;
+                                top:35%;
+                                width:.426667rem;
+                                height:.426667rem;
+                                content:'';
+                                background: url(../images/history.png) no-repeat;
+                                background-size: .426667rem .426667rem;
+                            }
+                        }
+                        border-bottom: 1px solid #CCCCCC;
+                    }
+                }
+            }
+            .his_footer{
+                padding:.4rem 0;
+                text-align: center;
+                font-size: .373333rem;
+                color: #999999;
+            }
+        }
+    }
+
+    // 主体 end
+}
